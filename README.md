@@ -38,7 +38,19 @@ Varmistin vielä, että uusi tekstitiedosto tosiaan luotiin ja että sen sisält
 
 Hyvältä näytti.
 
+__b) Ei vihkoa, ei kynää. Kerää Windows-koneen tekniset tiedot tekstitiedostoon. Vapaaehtoinen bonus: Saatko tiedot tallennettua myös json-muodossa?__
 
+PowerShellissä komennolla: `Get-CopmuterInfo` saa tietoja koneesta. </br>
+Aloitin kirjoittamalla komennon, joka kertoo tietoja koneesta ja samalla tallentaa tiedot uuteen tekstitiedostoon: </br>
+`Get-ComputerInfo > C:/Users/Julius/temppi/tietokoneen_tietoja.txt` </br>
+
+Tarkistin sen jälkeen, että uusi tekstitiedosto tietokoneen tiedoilla varmasti luotiin. </br>
+Siirryin hakemistoon, johon määritin tiedoston tallennettavaksi: `cd C:/Users/Julius/temppi/` </br>
+Käytin komentoa: `ls` listatakseni hakemiston sisällön, ja siellä näkyi uusi teskstitiedosto. </br>
+Tarkistin sen sisällön vielä komennolla: `notepad.exe .\tietokoneen_tietoja.txt`. </br>
+Kaikki näytti hyvältä.
+
+![Screenshot 2022-11-29 122819](https://user-images.githubusercontent.com/116954333/204505296-348f3b56-44db-4aa3-9eac-8c91cd8f13c5.png)
 
 
 
