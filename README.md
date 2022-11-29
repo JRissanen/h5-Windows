@@ -32,11 +32,11 @@ En tiedä mistä kyseinen virheilmoitusjohtui, mutta päätin kokeilla ajaa tila
 ![Screenshot 2022-11-27 143020](https://user-images.githubusercontent.com/116954333/204136122-a7043a9e-f0d4-44a2-953a-fc69eb9727f3.png)
 
 Kaikki näytti nyt toimivan niinkuin pitääkin. </br>
-Varmistin vielä, että uusi tekstitiedosto tosiaan luotiin ja että sen sisältö on oikea.
+Varmistin vielä, että uusi tekstitiedosto tosiaan luotiin ja että sen sisältö on oikea. </br>
+Hyvältä näytti.
 
 ![Screenshot 2022-11-27 143213](https://user-images.githubusercontent.com/116954333/204136499-222f6470-0a3d-438f-9797-2e61b5c5e0dd.png)
 
-Hyvältä näytti.
 
 __b) Ei vihkoa, ei kynää. Kerää Windows-koneen tekniset tiedot tekstitiedostoon. Vapaaehtoinen bonus: Saatko tiedot tallennettua myös json-muodossa?__
 
@@ -52,6 +52,7 @@ Kaikki näytti hyvältä.
 
 ![Screenshot 2022-11-29 122819](https://user-images.githubusercontent.com/116954333/204505296-348f3b56-44db-4aa3-9eac-8c91cd8f13c5.png)
 
+__c) Kop kop. Onko TCP-portti auki vai kiinni? Näytä esimerkit portin kokeilusta Linuxilla ja Windowsilla. Näytä kummallakin käyttöjärjestelmällä ainakin yksi avoin ja yksi suljettu portti. (Kokeile tätä vain omaan koneeseesi. Vieraiden koneiden ja verkkojen porttiskannaaminen on kiellettyä. Yksittäisen portin testaavat komennot ovat suositeltavia, esim. nc, tnc)__
 
 
 
