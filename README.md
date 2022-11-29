@@ -83,6 +83,14 @@ Kokeilin uudestaan muodostaa yhteyttä, mutta vieläkin sama virheilmoitus:
 
 Ajoin komennon: `Get-NetTCPConnection`, mutta silläkään ei tullut portteja 4505 ja 4506 näkyviin.
 
+Palautin tehtävän ja kävin arvioimassa parin muun kurssilaisen tehtävät ja tajusin, että eihän tässä edes vaadittu juuri Salt-masterin porttien testaamista, joten lisään tänne vielä toisen testin tulokset.
+
+Eli käytin komentoa `netstat` saadakseni tietoa avoimista porteista. </br>
+Komennolla: `tnc <ip-osoite> -p <porttinumero>` pystyin siis tarkistamaan saanko yhteyden muodostettua, vai en. </br>
+Tulosteista näkyi, että porttiin 4510 sain yhteyden ja porttiin 7833 en saanut. 
+
+![Screenshot 2022-11-29 181329](https://user-images.githubusercontent.com/116954333/204584252-8c3f699d-d2a9-4896-8356-f3982f8d23bb.png)
+
 __Lähteet__
 
 https://terokarvinen.com/2022/palvelinten-hallinta-2022p2/?from=MoodleNews#h1-hello-salt
