@@ -54,17 +54,43 @@ Kaikki näytti hyvältä.
 
 __c) Kop kop. Onko TCP-portti auki vai kiinni? Näytä esimerkit portin kokeilusta Linuxilla ja Windowsilla. Näytä kummallakin käyttöjärjestelmällä ainakin yksi avoin ja yksi suljettu portti. (Kokeile tätä vain omaan koneeseesi. Vieraiden koneiden ja verkkojen porttiskannaaminen on kiellettyä. Yksittäisen portin testaavat komennot ovat suositeltavia, esim. nc, tnc)__
 
+Aloitin kokeilemalla Linux järjestelmälläni. </br>
+Käytin komentoa: `ss` listaamaan tietoa eri porteista. </br>
+`sudo ss -ltnp` </br>
+Käytin päätettä `-ltnp` rajatakseni hakua, ettei näytölle tule turhaa tietoa. </br>
+Lisäsin komennon perään vielä: `|grep salt` päätteen, jotta saisin vain Saltin tiedot. </br>
+`sudo ss -ltnp|grep salt`
 
+Sitten kokeilin saako Salt-masterin portteihin yhteyden muodostettua: </br>
+`nc -vz <ip-osoite> <porttinumero>` </br>
+Aiemmin listattujen porttien mukaan Salt-masterille kuului portit 4505 ja 4506 ja näihin myös sai yhteyden. </br>
+Kokeilin vielä porttia 4507 ja siihen ei saanut yhteyttä.
 
+![Screenshot 2022-11-29 163054](https://user-images.githubusercontent.com/116954333/204568805-46a77c72-2f36-46f5-9697-5176ad9df401.png)
 
+Windowsin PowerShellillä en saanut portti scannausta onnistumaan. </br>
+Selvitin ip-osoitteen komennolla: `ipconfig`.</br>
+Kokeilin mudostaa yhteyttä komennolla: `tnc <ip-osoite> -p <porttinumero>` </br>
+Se ei kuitenkaan toiminut, vaan antoi virheilmoitusta.
 
+![Screenshot 2022-11-29 174614](https://user-images.githubusercontent.com/116954333/204575957-642f4ec7-67b3-4e55-a7e4-c7fba849d5d6.png)
 
+Sitten kokeilin Saltin omien sivujen ohjeiden mukaisesti avata portit 4505 ja 4506: </br>
+`netsh advfirewall firewall add rule name="Salt" dir=in action=allow protocol=TCP localport=4505-4506` </br>
+Kokeilin uudestaan muodostaa yhteyttä, mutta vieläkin sama virheilmoitus:
 
+![Screenshot 2022-11-29 174930](https://user-images.githubusercontent.com/116954333/204576809-57a7d916-b878-478b-a9f9-1d772b640b56.png)
 
+Ajoin komennon: `Get-NetTCPConnection`, mutta silläkään ei tullut portteja 4505 ja 4506 näkyviin.
 
+__Lähteet__
 
+https://terokarvinen.com/2022/palvelinten-hallinta-2022p2/?from=MoodleNews#h1-hello-salt
 
+https://repo.saltproject.io/#windows
 
+https://winbuzzer.com/2020/09/08/how-to-check-pc-specs-with-windows-10-system-information-powershell-and-more-xcxwbt/
 
+https://docs.saltproject.io/en/latest/topics/tutorials/firewall.html
 
-
+https://adamtheautomator.com/netstat-port/?utm_source=youtube&utm_medium=video&utm_campaign=techsnips-end
